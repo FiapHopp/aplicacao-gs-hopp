@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="_template.xhtml">
+
+
+	<ui:define name="content">
+		<p:messages id="messages">
+			<p:autoUpdate />
+		</p:messages>
+		<h:form>
+			<p:card class="form-card">
+				<f:facet name="title">
+		       Pontos Turisticos
+		    </f:facet>
+				<div class="p-field p-grid">
+
+					<p:dataTable value="#{pontoTuristicoBean.pontoTuristico}"
+						var="pontoTuristico">
+						<p:column headerText="Local">
+							<h:outputText
+								value="#{pontoTuristicoBean.pontoTuristico.nomePontoTuristico}" />
+						</p:column>
+						<p:column headerText="Endereco">
+							<h:outputText value="#{pontoTuristicoBean.pontoTuristico.cidade}" />
+						</p:column>
+						<p:column headerText="Avaliacao">
+							<h:outputText
+								value="#{pontoTuristicoBean.pontoTuristico.avaliacao}" />
+								<p:rating readonly="true" value="#{product.rating}"/>
+						</p:column>
+					</p:dataTable>
+				</div>
+			</p:card>
+
+		</h:form>
+
+	</ui:define>
+</ui:composition>
+</html>

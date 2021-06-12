@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="oracle"
+		transaction-type="RESOURCE_LOCAL">
+		<description>Forge Persistence Unit</description>
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<class>br.com.fiap.tds.entity.AvaliacaoHospedagem</class>
+		<class>br.com.fiap.tds.entity.AvaliacaoPontoTuristico</class>
+		<class>br.com.fiap.tds.entity.Cidade</class>
+		<class>br.com.fiap.tds.entity.Endereco</class>
+		<class>br.com.fiap.tds.entity.LocalHospedagem</class>
+		<class>br.com.fiap.tds.entity.Login</class>
+		<class>br.com.fiap.tds.entity.PontoTuristico</class>
+		<class>br.com.fiap.tds.entity.TipoHospedagem</class>
+		<class>br.com.fiap.tds.entity.TipoPontoTuristico</class>
+		<class>br.com.fiap.tds.entity.Usuario</class>
+		<properties>
+			<property name="hibernate.hbm2ddl.auto" value="create" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+			<property
+				name="hibernate.transaction.flush_before_completion" value="true" />
+			<property name="hibernate.dialect"
+				value="org.hibernate.dialect.Oracle10gDialect" />
+			<!-- JDBC connection -->
+			<property name="javax.persistence.jdbc.driver"
+				value="oracle.jdbc.OracleDriver" />
+			<property name="javax.persistence.jdbc.user" value="RM86327" />
+			<property name="javax.persistence.jdbc.password"
+				value="270700" />
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:oracle:thin:@oracle.fiap.com.br:1521:orcl" />
+		</properties>
+	</persistence-unit>
+</persistence>

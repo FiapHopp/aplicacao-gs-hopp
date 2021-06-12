@@ -1,0 +1,17 @@
+* {
+padding:0;
+margin:0;
+vertical-align:baseline;
+list-style:none;
+border:0;
+}
+
+.ui-inputfield{
+	font-family: 'Calibri';
+	margin-bottom: 3vh;
+}
+
+.form-card{
+	width: 25rem;
+	margin: 0 auto 0 auto;
+}
